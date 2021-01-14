@@ -129,8 +129,12 @@ USE_TZ = True
 #CKeditort Setting
 # Static File
 import os
-STATIC_ROOT = os.path.dirname(os.path.abspath(__file__))
+#STATIC_ROOT = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 # CDEditor
 CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
